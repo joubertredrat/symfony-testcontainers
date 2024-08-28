@@ -68,15 +68,15 @@
     "post-update-cmd": [
       "@auto-scripts"
     ],
-    "tests": "vendor/phpunit/phpunit/phpunit --testdox",
-    "unit-tests": "vendor/phpunit/phpunit/phpunit --testdox --testsuite Unit",
-    "integration-tests": "vendor/phpunit/phpunit/phpunit --testdox --testsuite Integration",
-    "coverage": "XDEBUG_MODE=coverage vendor/phpunit/phpunit/phpunit --coverage-html .coverage",
+    "tests": "vendor/phpunit/phpunit/phpunit --configuration phpunit.xml --testdox",
+    "unit-tests": "vendor/phpunit/phpunit/phpunit --configuration phpunit.xml --testdox --testsuite Unit",
+    "integration-tests": "vendor/phpunit/phpunit/phpunit --configuration phpunit.xml --testdox --testsuite Integration",
+    "coverage": "XDEBUG_MODE=coverage vendor/phpunit/phpunit/phpunit --configuration phpunit.xml --coverage-html .coverage",
     "coverage-browser": [
       "@coverage",
       "open .coverage/index.html"
     ],
-    "coverage-console": "XDEBUG_MODE=coverage vendor/phpunit/phpunit/phpunit --coverage-text",
+    "coverage-console": "XDEBUG_MODE=coverage vendor/phpunit/phpunit/phpunit --configuration phpunit.xml --coverage-text",
     "phpcs": [
       "vendor/squizlabs/php_codesniffer/bin/phpcs --standard=PSR12 -p --standard=ruleset.xml --extensions=php,inc,lib --ignore=*/Migrations/* src/",
       "vendor/squizlabs/php_codesniffer/bin/phpcs --standard=PSR12 -p --standard=ruleset.xml --extensions=php,inc,lib tests/"
