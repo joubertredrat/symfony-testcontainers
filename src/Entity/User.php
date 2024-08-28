@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[ORM\HasLifecycleCallbacks]
-#[ORM\Table(name: '`user`')]
+#[ORM\Table(name: '`users`')]
 class User
 {
     protected const CANONICAL_FORMAT = 'Y-m-d H:i:s';
