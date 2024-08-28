@@ -11,6 +11,7 @@
     "doctrine/doctrine-bundle": "^2.12",
     "doctrine/doctrine-migrations-bundle": "^3.3",
     "doctrine/orm": "^3.2",
+    "fig/http-message-util": "^1.1",
     "symfony/console": "7.1.*",
     "symfony/dotenv": "7.1.*",
     "symfony/flex": "^2",
@@ -70,8 +71,9 @@
     "tests": "vendor/phpunit/phpunit/phpunit --testdox",
     "unit-tests": "vendor/phpunit/phpunit/phpunit --testdox --testsuite Unit",
     "integration-tests": "vendor/phpunit/phpunit/phpunit --testdox --testsuite Integration",
-    "coverage": [
-      "XDEBUG_MODE=coverage vendor/phpunit/phpunit/phpunit --coverage-html .coverage",
+    "coverage": "XDEBUG_MODE=coverage vendor/phpunit/phpunit/phpunit --coverage-html .coverage",
+    "coverage-browser": [
+      "@coverage",
       "open .coverage/index.html"
     ],
     "coverage-console": "XDEBUG_MODE=coverage vendor/phpunit/phpunit/phpunit --coverage-text",
