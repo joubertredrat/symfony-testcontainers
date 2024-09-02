@@ -25,7 +25,7 @@
     "phpunit/phpunit": "^11",
     "slevomat/coding-standard": "^8.15",
     "squizlabs/php_codesniffer": "^3.10",
-    "symfony/maker-bundle": "^1.60",
+    "symfony/maker-bundle": "^1.61",
     "testcontainers/testcontainers": "^0.2.0"
   },
   "config": {
