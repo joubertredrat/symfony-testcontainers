@@ -42,6 +42,7 @@ class UserServiceTest extends TestCase
             ->andReturn()
         ;
 
+        /** @var UserRepositoryInterface $userRepository */
         $userService = new UserService($userRepository);
         $userGot = $userService->create($createUser);
 
@@ -70,6 +71,7 @@ class UserServiceTest extends TestCase
             ->andReturn($userFound)
         ;
 
+        /** @var UserRepositoryInterface $userRepository */
         $userService = new UserService($userRepository);
         $userService->create($createUser);
     }
@@ -90,6 +92,7 @@ class UserServiceTest extends TestCase
             ->andReturn($userExpected)
         ;
 
+        /** @var UserRepositoryInterface $userRepository */
         $userService = new UserService($userRepository);
         $userGot = $userService->getById($id);
 
@@ -109,6 +112,7 @@ class UserServiceTest extends TestCase
             ->andReturn(null)
         ;
 
+        /** @var UserRepositoryInterface $userRepository */
         $userService = new UserService($userRepository);
         $userService->getById($id);
     }
@@ -124,6 +128,7 @@ class UserServiceTest extends TestCase
             ->andReturn($usersExpected)
         ;
 
+        /** @var UserRepositoryInterface $userRepository */
         $userService = new UserService($userRepository);
         $usersGot = $userService->list();
 
