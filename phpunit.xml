@@ -31,4 +31,8 @@
       <directory suffix=".php">src</directory>
     </include>
   </source>
+  <extensions>
+    <bootstrap class="App\Tests\IntegrationTestExtension">
+    </bootstrap>
+  </extensions>
 </phpunit>
